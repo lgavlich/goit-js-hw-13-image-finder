@@ -65,7 +65,7 @@ function smoothScrolling() {
             block: 'end',
         })
     } catch {
-        console.log(onError);
+       // console.log(onError);
     }
 };
 
