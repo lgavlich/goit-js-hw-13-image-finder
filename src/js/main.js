@@ -4,7 +4,7 @@ import '@pnotify/core/dist/PNotify.css';
 import imgCard from '../templates/card.hbs';
 import SearchIpiImages from "./apiService.js";
 import LoadButton from "./btn.js";
-import { onImgClick } from './lightbox';
+import { onImgClick } from './box';
 
 const refs = {
     input: document.querySelector('#search-form'),
