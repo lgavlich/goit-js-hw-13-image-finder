@@ -1,3 +1,11 @@
+import { error } from '@pnotify/core';
+import '@pnotify/core/dist/BrightTheme.css';
+import '@pnotify/core/dist/PNotify.css';
+import imgCard from '../templates/card.hbs';
+import SearchIpiImages from "./apiService.js";
+import LoadButton from "./btn.js";
+import { onImgClick } from './lightbox';
+
 const refs = {
     input: document.querySelector('#search-form'),
     galleryList: document.querySelector('.gallery-container'),
