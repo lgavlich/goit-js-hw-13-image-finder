@@ -9,6 +9,7 @@ import { onImgClick } from './box';
 const refs = {
     input: document.querySelector('#search-form'),
     galleryList: document.querySelector('.gallery-container'),
+    //loadMoreBtn:document.querySelector('[data-action="load-more]'),
 }
 const loadButton = new LoadButton({
     selector: '[data-action="load-more"]',
@@ -31,7 +32,7 @@ function onSearchImg(e) {
     }
     loadButton.show();
     searchIpiImages.resetPage();
-    cleanImgMarkup();
+    clearImgMarkUp();
     fetchImages();
 
 }
@@ -54,7 +55,7 @@ function imagesMarkUp(hits) {
     refs.galleryList.insertAdjacentHTML('beforeend', imgCard(hits))
 }
 
-function cleanImgMarkup() {
+function clearImgMarkUp() {
     refs.galleryList.innerHTML = '';
 }
 
@@ -64,8 +65,8 @@ function smoothScrolling() {
             behavior: 'smooth',
             block: 'end',
         })
-    } catch {
-       // console.log(onError);
+   } catch {
+    //   console.log(onError);
     }
 };
 
@@ -82,3 +83,4 @@ function noSearchWorld() {
         delay: 2000,
     });
 }
+
