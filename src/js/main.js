@@ -21,6 +21,7 @@ const searchIpiImages = new SearchIpiImages();
 refs.input.addEventListener('submit', onSearchImg);
 loadButton.refs.button.addEventListener('click', fetchImages);
 refs.galleryList.addEventListener('click', onImgClick);
+loadButton.hide();
 
 function onSearchImg(e) {
     e.preventDefault();

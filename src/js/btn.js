@@ -1,11 +1,8 @@
 export default class LoadMoreButton {
-    constructor({ selector, hidden = false }) {
+    constructor({ selector }) {
         this.refs = this.getRefs(selector);
-        if (hidden) {
-            this.hide();
-        }
-    };
-    getRefs(selector) {
+    }
+     getRefs(selector) {
         const refs = {};
         refs.button = document.querySelector(selector);
         refs.label = refs.button.querySelector('.label');
