@@ -1,4 +1,4 @@
-export default class LoadMoreButton{
+export default class LoadMoreButton {
     constructor({ selector, hidden = false }) {
         this.refs = this.getRefs(selector);
         if (hidden) {
@@ -13,15 +13,19 @@ export default class LoadMoreButton{
     }
     hide() {
         this.refs.button.classList.add('is-hidden');
+        
     }
     show() {
         this.refs.button.classList.remove('is-hidden');
     }
     enableBtn() {
         this.refs.button.disabled = false;
+        
     }
     disableBtn() {
         this.refs.button.disabled = true;
+        
     }
-    
 }
+    
+

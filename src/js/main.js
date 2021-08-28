@@ -9,7 +9,8 @@ import { onImgClick } from './box';
 const refs = {
     input: document.querySelector('#search-form'),
     galleryList: document.querySelector('.gallery-container'),
-    //loadMoreBtn:document.querySelector('[data-action="load-more]'),
+    loadBtn: document.querySelector('[data-action="load-more]'),
+   
 }
 const loadButton = new LoadButton({
     selector: '[data-action="load-more"]',
@@ -25,10 +26,12 @@ function onSearchImg(e) {
     e.preventDefault();
     searchIpiImages.query = e.currentTarget.elements.query.value;
     const searchImgTrim = searchIpiImages.query.trim();
-
+   
     if (searchImgTrim === '') {
         loadButton.disableBtn();
         return noSearchWorld();
+  
+         
     }
     loadButton.show();
     searchIpiImages.resetPage();
@@ -47,6 +50,7 @@ function fetchImages() {
         if (hits.length === 0) {
             loadButton.hide();
             onError();
+           
         }
     });
 }
@@ -57,6 +61,7 @@ function imagesMarkUp(hits) {
 
 function clearImgMarkUp() {
     refs.galleryList.innerHTML = '';
+    
 }
 
 function smoothScrolling() {
@@ -66,7 +71,7 @@ function smoothScrolling() {
             block: 'end',
         })
    } catch {
-    //   console.log(onError);
+      console.log(onError);
     }
 };
 
