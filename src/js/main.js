@@ -7,11 +7,11 @@ import LoadButton from "./btn.js";
 import { onImgClick } from './box';
 
 const refs = {
-    input: document.querySelector('#search-form'),
-    galleryList: document.querySelector('.gallery-container'),
-    loadBtn: document.querySelector('[data-action="load-more]'),
-   
-}
+  input: document.querySelector('#search-form'),
+  galleryList: document.querySelector('.gallery-container'),
+  loadBtn: document.querySelector('[data-action="load-more]'),
+ 
+};
 const loadButton = new LoadButton({
     selector: '[data-action="load-more"]',
     hidden: true,
